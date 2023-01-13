@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "main:app",
+        "--reload",
+        "--port",
+        "8080",
+        "--host",
+        "0.0.0.0"
+      ],
+      "env": {
+        "DEBUG_SKIP_API_KEY_CHECK": "True",
+        "DEBUG_USE_SEED_DATA": "True",
+        "DEBUG_SKIP_EMBEDDING_COMPUTATION": "True"
+      }
+    },
+  ]
+}
